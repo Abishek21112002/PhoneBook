@@ -924,7 +924,7 @@ void displayContactsInHashTablePhoneNumber(void){
 }
 void backupContactsToAFile(void){
 
-    FILE * fp=fopen("/home/shek/CLionProjects/PhoneBook/BackupContacts.txt","a");
+    FILE * fp=fopen("/home/shek/CLionProjects/PhoneBook/Contacts.txt","a");
     for(int i=0;i<26;++i){
 
         if(hashTableUsingNames[i]){
@@ -1058,6 +1058,8 @@ bool execute(int ch){
 void run(void){
 
     initialize();
+
+    loadContactsFromAFile();
 
     int choice;
 
